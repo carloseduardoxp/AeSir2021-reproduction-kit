@@ -97,6 +97,17 @@ Uncomment the @Qualifier("metricAction") line on Principal.java file. And commen
 
 After finish, the table postsmin will update querysite table including understandability and readability metrics
 
+Step 4 - Generate CSV files
+
+1 - run the following script on PgAdmin 4
+
+```
+Copy (select site,dominio,ranking,queryId,round(readability::numeric,4) as readability,understandability,understand_normalized from querysite where code is not null order by queryId) 
+To '/tmp/saida.csv' With CSV DELIMITER ';' HEADER;
+```
+
+2 - run the file ScriptGenerateCSV.java, changing the path to the files saida.csv, readability.csv and understandability.csv.
+
 Step 4 - Results
 -----------------------------------------------------------
 

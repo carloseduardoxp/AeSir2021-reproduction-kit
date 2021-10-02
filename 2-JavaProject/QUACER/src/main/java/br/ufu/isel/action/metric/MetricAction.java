@@ -40,7 +40,7 @@ public class MetricAction implements Action {
 				querySite.setUnderstandability(und);
 				Double read = readabilityMetricService.getScore(queryAtual,querySite.getCode());
 				querySite.setReadability(read);
-				//querySiteService.update(querySite);	
+				querySiteService.update(querySite);	
 			} catch(Exception e) {
 				System.out.println("O erro aconteceu na query "+queryAtual+" -> "+e);
 				e.printStackTrace();

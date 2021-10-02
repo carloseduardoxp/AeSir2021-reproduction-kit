@@ -1,0 +1,37 @@
+public class Test { 
+ public static void main(String args[]) { 
+ //dummy dataframe with two column id and value
+val df = Seq(
+  ("a", 1),
+  ("b", 4),
+  ("c", 2),
+  ("d", 6),
+  ("e", 10),
+  ("f", 11)
+).toDF("id", "value")
+
+//Now this will change the all value with greater than 5 to 0
+val newDF = df.withColumn("value", when($"value" > 5, 0).otherwise($"value"))
+
+----next----
+
+val newDF = df.select($"id", when($"value" > 5, 0).otherwise($"value").as("value"))
+
+----next----
+
++---+-----+
+|id |value|
++---+-----+
+|a  |1    |
+|b  |4    |
+|c  |2    |
+|d  |0    |
+|e  |0    |
+|f  |0    |
++---+-----+
+
+----next----
+
+
+ } 
+ }

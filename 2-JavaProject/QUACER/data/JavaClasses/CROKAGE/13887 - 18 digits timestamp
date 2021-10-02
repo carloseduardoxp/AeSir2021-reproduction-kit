@@ -1,0 +1,29 @@
+public class Test { 
+ public static void main(String args[]) { 
+ Letter     Date or Time Component     Presentation     Examples  
+S          Millisecond                Number           978
+
+----next----
+
+Date d =new Date();
+    System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S").format(d));
+    System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SS").format(d));
+    System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(d));
+    System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSS").format(d));
+    System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSSS").format(d));
+    System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSSSS").format(d));
+
+----next----
+
+2013-10-07 12:13:27.132
+2013-10-07 12:13:27.132
+2013-10-07 12:13:27.132
+2013-10-07 12:13:27.0132
+2013-10-07 12:13:27.00132
+2013-10-07 12:13:27.000132
+
+----next----
+
+
+ } 
+ }

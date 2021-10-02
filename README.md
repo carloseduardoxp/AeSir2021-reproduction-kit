@@ -57,7 +57,7 @@ select count(*) from querysite where readability is not null
 
 Import the Application 
 
-3. Import the QUACER repository into your Spring Tool Suite 4 IDE 
+3. Import the [QUACER repository](https://github.com/carloseduardoxp/AeSir2021-reproduction-kit/tree/master/2-JavaProject/QUACER)  into your Spring Tool Suite 4 IDE
 
 ```
 right click on mouse - import - existing maven projects - select the clone directory.
